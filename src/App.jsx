@@ -1,5 +1,5 @@
 import { useState ,useEffect} from 'react'
-
+import Country from './component/Country/Country';
 import './App.css'
 
 function App() {
@@ -24,12 +24,17 @@ function LoadCountries() {
     <div>
       <h1>Visiting Every Countries</h1>
       <h3>Availavale countries:{countries.length}</h3>
-      {/* {
-        countries.map(country=>)
-      } */}
+      {
+        countries.map(country=>
+          <Country name={country.name.common}></Country>
+          )
+      }
     </div>
   )
   
 }
+
+
+
 
 export default App
