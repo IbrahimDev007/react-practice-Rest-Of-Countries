@@ -1,5 +1,5 @@
 import { useState ,useEffect} from 'react'
-import Country from './component/Country/Country';
+import Countryes from './component/Countryes/Countryes';
 import './App.css'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
    <div className="app">
-    <LoadCountries/>
+    <Countryes/>
    </div>
   )
 }
