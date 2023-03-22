@@ -7,18 +7,26 @@ const Countryes=()=> {
   useEffect(() => {
     fetch(`https://restcountries.com/v3.1/all`)
   .then(res=>res.json())
-  .then(data=>setCountries(data))
+  .then(data=>{console.log(data); setCountries(data)})
+
   }, [])
   
   return(
-    <div>
+    <div className=' flex justify-center text-center'>
       <h1>Visiting Every Countries</h1>
       <h3>Availavale countries:{countries.length}</h3>
-      {
+      <div className='row'>
+        
+  
+        {
         countries.map(country=>(
-          <Country name={country.name.common}/>  )
+          <Country countries={country}/>  )
           )
       }
+    
+   
+      </div>
+    
     </div>
   )
   
